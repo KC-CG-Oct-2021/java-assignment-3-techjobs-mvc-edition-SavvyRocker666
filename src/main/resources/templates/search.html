@@ -12,7 +12,6 @@
 
     <form th:action="@{/search/results}" method = "post">
         <h2>Search by:</h2>
-
         <p>
             <span th:each="column : ${columns}">
                 <input
@@ -20,7 +19,7 @@
                         name="searchType"
                         th:id="${column.key}"
                         th:value="${column.key}"
-                        th:checked="${column.key == 'all'}"/>
+                        th:checked="${column.key == previousSearchType}"/>
                 <label th:for="${column.key}" th:text="${column.value}"></label>
             </span>
 
@@ -37,7 +36,7 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-
+    <table th:replace="list-jobs::results">Results Table</table>
 </div>
 
 </body>

@@ -18,10 +18,12 @@ public class TechJobsController {
         columnChoices.put("positionType", "Position Type");
         columnChoices.put("coreCompetency", "Core Competency");
     }
+
     @ModelAttribute("actions")
     public static HashMap<String, String> getActionChoices() {
         return actionChoices;
     }
+
     @ModelAttribute("columns")
     public static HashMap<String, String> getColumnChoices() {
         return columnChoices;

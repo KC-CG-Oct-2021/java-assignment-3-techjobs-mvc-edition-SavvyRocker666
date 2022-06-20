@@ -11,6 +11,33 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
+    <table th:fragment="results" th:each="job:${jobs}" class="job-listing">
+        <tr>
+            <td class="dataLabel">ID</td>
+            <td th:text="|${job.id}|">ID</td>
+        </tr>
+        <tr>
+            <td class="dataLabel">Name</td>
+            <td th:text="|${job.name}|">Name</td>
+        </tr>
+        <tr>
+            <td class="dataLabel">Employer</td>
+            <td th:inline="text">[[${job.employer}]] - <a th:text="|Search for ${job.employer}|" th:href="@{/list/jobs(column='employer',value=${job.employer})}">Employer</a></td>
+        </tr>
+        <tr>
+            <td class="dataLabel">Location</td>
+            <td th:inline="text">[[${job.location}]] - <a th:text="|Search for ${job.location}|" th:href="@{/list/jobs(column='location',value=${job.location})}">Location</a></td>
+        </tr>
+        <tr>
+            <td class="dataLabel">Position Type</td>
+            <td th:inline="text">[[${job.positionType}]] - <a th:text="|Search for ${job.positionType}|" th:href="@{/list/jobs(column='positionType',value=${job.positionType})}">Position Type</a></td>
+        </tr>
+        <tr>
+            <td class="dataLabel">Skill</td>
+            <td th:inline="text">[[${job.coreCompetency}]] - <a th:text="|Search for ${job.coreCompetency}|" th:href="@{/list/jobs(column='coreCompetency',value=${job.coreCompetency})}">Core Competency</a></td>
+
+        </tr>
+    </table>
 
 </div>
 

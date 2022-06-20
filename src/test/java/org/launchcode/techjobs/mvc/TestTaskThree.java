@@ -28,8 +28,8 @@ public class TestTaskThree {
     SearchController searchController;
 
     /*
-    * Check that displaySearchMethod exists and has the correct parameter types
-    * */
+     * Check that displaySearchMethod exists and has the correct parameter types
+     * */
     @Test
     public void testDisplaySearchResultsMethodExists() throws ClassNotFoundException {
         Class searchControllerClass = Class.forName("org.launchcode.techjobs.mvc.controllers.SearchController");
@@ -43,8 +43,8 @@ public class TestTaskThree {
     }
 
     /*
-    * Check that displaySearchMethod has the correct request mapping annotation and value
-    * */
+     * Check that displaySearchMethod has the correct request mapping annotation and value
+     * */
     @Test
     public void testDisplaySearchResultsUsesCorrectAnnotation() throws ClassNotFoundException, NoSuchMethodException {
         Class searchControllerClass = Class.forName("org.launchcode.techjobs.mvc.controllers.SearchController");
@@ -55,8 +55,8 @@ public class TestTaskThree {
     }
 
     /*
-    * Check the parameters to displaySearchMethod have the correct annotations
-    * */
+     * Check the parameters to displaySearchMethod have the correct annotations
+     * */
     @Test
     public void testDisplaySearchResultsHasCorrectParameterAnnotations() throws ClassNotFoundException, NoSuchMethodException {
         Class searchControllerClass = Class.forName("org.launchcode.techjobs.mvc.controllers.SearchController");
@@ -70,8 +70,8 @@ public class TestTaskThree {
     }
 
     /*
-    * Check that displaySearchResults has the correct parameter names, ensure parameter binding occurs
-    * */
+     * Check that displaySearchResults has the correct parameter names, ensure parameter binding occurs
+     * */
     @Test
     public void testDisplaySearchResultsHasCorrectParameterNames() throws ClassNotFoundException, NoSuchMethodException {
         Class searchControllerClass = Class.forName("org.launchcode.techjobs.mvc.controllers.SearchController");
@@ -82,8 +82,8 @@ public class TestTaskThree {
     }
 
     /*
-    * Checks that displaySearchResults calls JobData.findAll when apppropriate
-    * */
+     * Checks that displaySearchResults calls JobData.findAll when apppropriate
+     * */
     @Test
     public void testDisplaySearchResultsCallsFindAll(@Mocked JobData jobData) throws NoSuchMethodException, ClassNotFoundException, InvocationTargetException, IllegalAccessException {
         Class searchControllerClass = Class.forName("org.launchcode.techjobs.mvc.controllers.SearchController");
@@ -114,8 +114,8 @@ public class TestTaskThree {
     }
 
     /*
-    * Checks that displaySearchResults sets the necessary model attributes
-    * */
+     * Checks that displaySearchResults sets the necessary model attributes
+     * */
     @Test
     public void testDisplaySearchResultsSetsModelAtts() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Class searchControllerClass = Class.forName("org.launchcode.techjobs.mvc.controllers.SearchController");

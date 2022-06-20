@@ -44,3 +44,9 @@ label {
 .centered {
     text-align: center;
 }
+.dataLabel{
+    font-size: 14px;
+    font-style: italic;
+    text-align: right;
+    padding-right: 5px;
+}
